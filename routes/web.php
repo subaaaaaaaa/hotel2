@@ -14,3 +14,19 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/guest', 'GuestController@index');
+
+Route::get('guest/info', 'GuestController@add');
+Route::post('guest/info', 'GuestController@create');
+
+Route::get('reserve', 'ReservationController@index');
+
+Route::get('guest/reserve', 'ReservationController@add');
+Route::post('guest/reserve', 'ReservationController@create');
+
+Route::get('hotel', 'HotelController@index');
+
+Route::get('room_type', 'Room_typeController@index');
+
+Route::get('room', 'RoomController@index');
