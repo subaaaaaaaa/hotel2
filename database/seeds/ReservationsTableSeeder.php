@@ -14,24 +14,24 @@ class ReservationsTableSeeder extends Seeder
         $param = [
             'number_of_adults'=>1,
             'number_of_children'=>0,
-            'check-in_date'=>'2023-11-20',
-            'check-out_date'=>'2023-11-22',
+            'checkIn_date'=>'2023-11-20',
+            'checkOut_date'=>'2023-11-22',
         ];
         DB::table('reservations')->insert($param);
 
         $param = [
             'number_of_adults'=>2,
             'number_of_children'=>1,
-            'check-in_date'=>'2023-11-25',
-            'check-out_date'=>'2023-11-26',
+            'checkIn_date'=>'2023-11-25',
+            'checkOut_date'=>'2023-11-26',
         ];
         DB::table('reservations')->insert($param);
 
         $param = [
             'number_of_adults'=>4,
             'number_of_children'=>0,
-            'check-in_date'=>'2023-11-16',
-            'check-out_date'=>'2023-11-20',
+            'checkIn_date'=>'2023-11-16',
+            'checkOut_date'=>'2023-11-20',
         ];
         DB::table('reservations')->insert($param);
     }

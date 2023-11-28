@@ -30,3 +30,7 @@ Route::get('hotel', 'HotelController@index');
 Route::get('room_type', 'Room_typeController@index');
 
 Route::get('room', 'RoomController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

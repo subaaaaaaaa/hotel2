@@ -18,8 +18,8 @@ class CreateReservationsTable extends Migration
             $table->string('guest_id');
             $table->integer('number_of_adults');
             $table->integer('number_of_children');
-            $table->dateTime('check-in_date');
-            $table->dateTime('check-out_date');
+            $table->dateTime('checkIn_date');
+            $table->dateTime('checkOut_date');
             $table->timestamps();
 
             // $table->foreign('guest_id')->references('id')->on('guests');

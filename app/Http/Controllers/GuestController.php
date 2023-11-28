@@ -13,18 +13,18 @@ class GuestController extends Controller
         return view('guest.index',['guests' => $guests]);
     }
 
-    public function add(Request $request)
+    public function add()
     {
         return view('guest.add');
     }
 
     public function create(Request $request)
     {
-        $this->validate($request, Guest::$rules);
+        // $this->validate($request, Guest::$rules);
         $guest = new Guest;
         $form = $request->all();
         unset($form['_token']);
         $guest->fill($form)->save();
-        return redirect('/guest/reserve');
+        return redirect('guest/reserve');
     }
 }

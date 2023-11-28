@@ -21,12 +21,16 @@
     <table>
         @csrf
         <tr>
+            <th>お客様ID</th>
+            <td><input type="hidden" name="id" value="{{1}}"></td>
+        </tr>
+        <tr>
             <th>チェックイン</th>
-            <td><input type="date" name="check-in_date" value=""></td>
+            <td><input type="date" name="checkIn_date" value=""></td>
         </tr>
         <tr>
             <th>チェックアウト</th>
-            <td><input type="date" name="check-out_date" value=""></td>
+            <td><input type="date" name="checkOut_date" value=""></td>
         </tr>
         <tr>
             <th>大人</th>

@@ -6,16 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Guest extends Model
 {
-    protected $guarded = array('guest_id');
+    protected $fillable = ['name','address','tel'];
 
     public static $rules = array(
         'name' => 'required',
         'address' => 'required',
         'tel' => 'required'
     );
-
-    public function hotel()
-    {
-        return $this->hasOne('App\Hotel');
-    }
+    
 }
