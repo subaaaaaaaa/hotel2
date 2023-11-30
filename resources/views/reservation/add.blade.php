@@ -22,7 +22,8 @@
         @csrf
         <tr>
             <th>お客様ID</th>
-            <td><input type="hidden" name="id" value="{{1}}"></td>
+            {{-- <td>{{$items}}</td> --}}
+            <td><input type="hidden" name="guest_id" value="{{$guest_id}}"></td>
         </tr>
         <tr>
             <th>チェックイン</th>

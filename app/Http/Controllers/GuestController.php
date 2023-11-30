@@ -25,6 +25,6 @@ class GuestController extends Controller
         $form = $request->all();
         unset($form['_token']);
         $guest->fill($form)->save();
-        return redirect('guest/reserve');
+        return view('reservation.add',['guest_id'=>$guest->id]);
     }
 }

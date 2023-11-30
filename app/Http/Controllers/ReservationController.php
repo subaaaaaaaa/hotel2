@@ -15,7 +15,9 @@ class ReservationController extends Controller
 
     public function add(Request $request)
     {
-        return view('reservation.add');
+        $items = Reservation::all();
+        $id=$request->id;
+        return view('reservation.add',['items' => $items]);
     }
 
     public function create(Request $request)
@@ -25,6 +27,7 @@ class ReservationController extends Controller
         $form = $request->all();
         unset($form['_token']);
         $reservation->fill($form)->save();
+        
         return redirect('reserve');
     }
 }
